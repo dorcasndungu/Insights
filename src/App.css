@@ -1,52 +1,96 @@
+/* App.css */
 body {
-  background-color: #f8f9fa;
+  background-color: #e7f0fd; /* Light blue background */
+  color: #333; /* Darker text for better readability */
+  font-family: 'Arial', sans-serif; /* Modern font */
+}
+
+.container {
+  max-width: 1200px; /* Set a max-width for larger screens */
+  margin-top: 50px; /* Spacing from the top */
+}
+
+h1, .card-title {
+  color: #007bff; /* Bootstrap primary blue for the title */
 }
 
 h1 {
-  font-size: 2.5rem;
-  color: #333;
+  font-size: 3rem; /* Larger font size for the title */
 }
 
 .tagline {
-  font-size: 1.2rem;
-  color: #666;
+  color: #6c757d; /* Muted text color for the tagline */
+  font-size: 1.5rem; /* Larger font size for the tagline */
+  margin-bottom: 30px; /* Spacing after the tagline */
 }
 
-.search-bar {
+.search-container, .form-control {
+  border-radius: 20px; /* Rounded corners for input and search container */
+}
+
+.search-container {
   position: relative;
-  max-width: 600px;
+  margin-bottom: 50px; /* Spacing after the search bar */
+  display: flex;
+  align-items: center;
 }
 
-.search-bar input[type="text"] {
-  width: 100%;
-  padding-right: 50px; /* Make room for the search icon */
+.form-control.rounded-pill, .form-control {
+  padding: 25px 20px; /* Larger padding for a taller search bar and form fields */
+  font-size: 1.25rem; /* Larger font size for the input text */
+  border: 2px solid #007bff; /* Blue border for the input */
+  box-shadow: none; /* Remove default Bootstrap shadow */
 }
 
-.search-bar button {
-  position: absolute;
-  right: 0;
-  border: none;
-  background: none;
-}
-
-.search-icon {
-  font-size: 1.5rem;
-}
-
+/* Style for the search results cards and form card */
 .card {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: none; /* Remove default border */
+  border-radius: 15px; /* Rounded corners for the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin-bottom: 20px; /* Spacing between cards */
+  background-color: #f8f9fa; /* Light blue background for the card */
 }
 
-.card-title {
-  font-size: 1.25rem;
-  color: #333;
+.card-body {
+  padding: 20px; /* Padding inside the card */
 }
 
-.card-text {
-  font-size: 1rem;
-  color: #555;
+.card-text, .text-muted {
+  color: #333; /* Darker text for readability */
 }
 
 .text-muted {
-  color: #ccc;
+  color: #adb5bd; /* Muted text for 'no reviews' message */
+}
+
+.btn-primary {
+  background-color: #007bff; /* Bootstrap primary blue for the button */
+  border: none; /* Remove default border */
+}
+
+/* Ensure the form card is always centered vertically and horizontally */
+.container.d-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height of the viewport */
+}
+
+/* Style adjustments for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  h1 {
+    font-size: 2.5rem; /* Adjust title size for smaller screens */
+  }
+
+  .tagline {
+    font-size: 1.25rem; /* Adjust tagline size for smaller screens */
+  }
+
+  .card {
+    width: 90%; /* Make the card width responsive */
+  }
 }
