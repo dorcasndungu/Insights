@@ -12,6 +12,7 @@ function LandingScreen() {
     <div className="container">
       <h1 className="mt-5">Insights👀</h1>
       <p className="tagline">Get insights on prospective instructors</p>
+      <p >❌ This website displays only opinions and users should use it at their own risk!</p>
       <div className="search-container">
         <input type="text" className="form-control rounded-pill" placeholder="Search an instructor..." />
       </div>
